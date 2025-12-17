@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+        .post-lists{
+            padding: 10px;
+        }
+        .post-list{
+            display: inline-block;
+            border: 5px solid red;
+            width: 300px;
+            padding:  5px;
+        }
+
+    </style>
+
+    <h1>Postlar ro`hati</h1>
+    <div class="post-lists">
+        {% for post in posts %}
+    <div class="post-list">
+            <h1>{{post.title}}</h1>
+            <p>{{post.description}}</p>
+            <span>{{post.views_count}}</span>
+            <span>{{post.total_comment}}</span>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
